@@ -26,9 +26,7 @@ jobs:
           if [ -f phase-0-fondations/mem-archiviste/requirements.txt ]; then pip install -r phase-0-fondations/mem-archiviste/requirements.txt; fi
 
       - name: Syntax check
-        run: |
-          python -m compileall .
+        run: python -m compileall .
 
-            - name: Run tests
-        run: |
-          python -m pytest -vv -s phase-0-fondations/mem-archiviste/tests/test_index_rag.py
+      - name: Run tests
+        run: python -m pytest -vv -s phase-0-fondations/mem-archiviste/tests/test_index_rag.py
