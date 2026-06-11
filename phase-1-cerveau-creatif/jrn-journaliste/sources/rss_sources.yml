@@ -1,0 +1,13 @@
+version: 1
+sources:
+  - name: google-news-world
+    type: rss
+    url: https://news.google.com/rss?hl=fr&gl=CA&ceid=CA:fr
+
+  - name: google-news-tech
+    type: rss
+    url: https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=fr&gl=CA&ceid=CA:fr
+
+  - name: google-news-business
+    type: rss
+    url: https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=fr&gl=CA&ceid=CA:fr

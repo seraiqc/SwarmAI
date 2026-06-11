@@ -1,0 +1,52 @@
+version: 1
+agent: sec-securite
+
+secret_patterns:
+  - api_key
+  - api-key
+  - secret
+  - token
+  - password
+  - private_key
+  - private key
+  - bearer
+  - aws_access_key_id
+  - aws_secret_access_key
+
+file_rules:
+  block_extensions:
+    - .env
+    - .pem
+    - .key
+    - .p12
+    - .pfx
+  scan_extensions:
+    - .py
+    - .js
+    - .ts
+    - .sh
+    - .yml
+    - .yaml
+    - .json
+    - .md
+
+actions:
+  on_secret_found: block
+  on_high_risk_file: alert
+  on_clean_scan: allow
+
+severity:
+  critical:
+    - private_key
+    - aws_secret_access_key
+    - aws_access_key_id
+  high:
+    - token
+    - password
+    - api_key
+
+alerts:
+  channels:
+    - slack
+    - email
+    - pagerduty

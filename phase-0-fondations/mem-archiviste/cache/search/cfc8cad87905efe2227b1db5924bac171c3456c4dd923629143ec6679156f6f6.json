@@ -1,0 +1,83 @@
+{
+  "created_at": 1781178646.4153438,
+  "query": "Kael archives Nord",
+  "top_k": 5,
+  "data": {
+    "query": "Kael archives Nord",
+    "top_k": 5,
+    "count": 5,
+    "results": [
+      {
+        "id": "char-kael",
+        "title": "Kael Varn",
+        "type": "character",
+        "summary": "Stratège exilé chargé de réunifier les maisons du Nord.",
+        "tags": [
+          "hero",
+          "war",
+          "fantasy"
+        ],
+        "universe": "core",
+        "path": "knowledge-base/characters/kael.md",
+        "score": 2.945661
+      },
+      {
+        "id": "time-chute-varn",
+        "title": "Chute de la Maison Varn",
+        "type": "timeline",
+        "summary": "Chronologie de l'effondrement de la Maison Varn.",
+        "tags": [
+          "war",
+          "politics",
+          "timeline"
+        ],
+        "universe": "core",
+        "path": "knowledge-base/timelines/chute-varn.md",
+        "score": 1.769414
+      },
+      {
+        "id": "loc-citadelle-noire",
+        "title": "Citadelle Noire",
+        "type": "location",
+        "summary": "Forteresse politique et militaire contrôlant les routes du Nord.",
+        "tags": [
+          "location",
+          "war",
+          "politics"
+        ],
+        "universe": "core",
+        "path": "knowledge-base/locations/citadelle-noire.md",
+        "score": 1.705836
+      },
+      {
+        "id": "theme-archives-perdues",
+        "title": "Archives perdues",
+        "type": "theme",
+        "summary": "Thème central autour de documents disparus pouvant changer la légitimité du pouvoir.",
+        "tags": [
+          "mystery",
+          "politics",
+          "canon"
+        ],
+        "universe": "core",
+        "path": "knowledge-base/themes/archives-perdues.md",
+        "score": 0.886601
+      },
+      {
+        "id": "char-maera",
+        "title": "Maera Sol",
+        "type": "character",
+        "summary": "Archiviste mystique gardienne des pactes anciens.",
+        "tags": [
+          "mentor",
+          "magic",
+          "fantasy"
+        ],
+        "universe": "core",
+        "path": "knowledge-base/characters/maera.md",
+        "score": 0.558849
+      }
+    ],
+    "cache": "miss"
+  }
+}

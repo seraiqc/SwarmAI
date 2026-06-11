@@ -1,0 +1,20 @@
+{
+  "title": "Swarm Monitoring",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "System Status",
+      "targets": []
+    },
+    {
+      "type": "graph",
+      "title": "Latency",
+      "targets": []
+    },
+    {
+      "type": "graph",
+      "title": "Error Rate",
+      "targets": []
+    }
+  ]
+}
