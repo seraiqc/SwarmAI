@@ -8,13 +8,18 @@ def load_alerts():
         return {
             "latency_ms_warning": 500,
             "error_rate_warning": 5,
-            "uptime_minimum_percent": 99
+            "uptime_minimum_percent": 99,
         }
 
     data = {}
     for line in config_path.read_text(errors="ignore").splitlines():
         line = line.strip()
-        if not line or line.startswith("version:") or line.startswith("alerts:") or line.startswith("channels:"):
+        if (
+            not line
+            or line.startswith("version:")
+            or line.startswith("alerts:")
+            or line.startswith("channels:")
+        ):
             continue
         if ":" in line and not line.startswith("-"):
             key, value = line.split(":", 1)
@@ -23,7 +28,7 @@ def load_alerts():
     return {
         "latency_ms_warning": int(data.get("latency_ms_warning", 500)),
         "error_rate_warning": int(data.get("error_rate_warning", 5)),
-        "uptime_minimum_percent": int(data.get("uptime_minimum_percent", 99))
+        "uptime_minimum_percent": int(data.get("uptime_minimum_percent", 99)),
     }
 
 
@@ -56,7 +61,7 @@ def check_health():
         "latency_ms": current_latency,
         "error_rate": current_error_rate,
         "uptime_percent": current_uptime,
-        "issues": issues
+        "issues": issues,
     }
 
 

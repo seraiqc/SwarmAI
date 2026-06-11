@@ -175,7 +175,9 @@ def score_bm25_like(query_terms: list[str], store: dict, top_k: int = 10) -> lis
 
 def save_store(store: dict, path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(store, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+    path.write_text(
+        json.dumps(store, ensure_ascii=False, indent=2, default=str), encoding="utf-8"
+    )
 
 
 def load_store(path: Path) -> dict:
@@ -185,7 +187,9 @@ def load_store(path: Path) -> dict:
 def cmd_index() -> int:
     docs = read_markdown_docs(KB_DIR)
     if not docs:
-        raise SystemExit("Aucun document Markdown avec frontmatter valide trouvé dans knowledge-base/")
+        raise SystemExit(
+            "Aucun document Markdown avec frontmatter valide trouvé dans knowledge-base/"
+        )
     store = build_inverted_index(docs)
     save_store(store, STORE_FILE)
     print(f"Index créé: {STORE_FILE}")
@@ -195,11 +199,15 @@ def cmd_index() -> int:
 
 def cmd_search(query: str, top_k: int) -> int:
     if not STORE_FILE.exists():
-        raise SystemExit("Index absent. Lance d'abord: python pipelines/index_rag.py index")
+        raise SystemExit(
+            "Index absent. Lance d'abord: python pipelines/index_rag.py index"
+        )
     store = load_store(STORE_FILE)
     terms = tokenize(query)
     results = score_bm25_like(terms, store, top_k=top_k)
-    print(json.dumps({"query": query, "results": results}, ensure_ascii=False, indent=2))
+    print(
+        json.dumps({"query": query, "results": results}, ensure_ascii=False, indent=2)
+    )
     return 0
 
 
