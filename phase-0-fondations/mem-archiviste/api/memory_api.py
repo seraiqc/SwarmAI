@@ -18,8 +18,11 @@ CACHE_MODULE_DIR = BASE_DIR / "cache"
 if str(CACHE_MODULE_DIR) not in sys.path:
     sys.path.insert(0, str(CACHE_MODULE_DIR))
 
-from query_cache import clear_expired_cache, get_cached_search, set_cached_search  # noqa: E402
-
+from query_cache import (  # noqa: E402
+    clear_expired_cache,
+    get_cached_search,
+    set_cached_search,
+)
 
 HOST = "127.0.0.1"
 PORT = 8131

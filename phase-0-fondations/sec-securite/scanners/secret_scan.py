@@ -1,5 +1,5 @@
-from pathlib import Path
 import sys
+from pathlib import Path
 
 SENSITIVE_WORDS = [
     "api_key",
