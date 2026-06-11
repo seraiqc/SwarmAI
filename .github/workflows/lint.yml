@@ -1,6 +1,4 @@
-git add .github/workflows/lint.yml
-git commit -m "ci: add ruff lint workflow"
-git pushname: Python Lint
+name: Python Lint
 
 on:
   push:
@@ -22,7 +20,9 @@ jobs:
           python-version: "3.11"
 
       - name: Install Ruff
-        run: python -m pip install --upgrade pip ruff
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff
 
       - name: Run Ruff
         run: ruff check .
